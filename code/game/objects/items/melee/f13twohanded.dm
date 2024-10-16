@@ -33,13 +33,13 @@
 // AXES //
 //////////			-bonus damage to all doors, windows
 
-// Legion Axe		Keywords: Damage 30/60 do not change these numbers
+// Legion Axe		Keywords: Damage 25/50 do not change these numbers
 /obj/item/twohanded/legionaxe
 	name = "War Honed Axe"
 	desc = "Heavy fireman axe from the old world, Restored to working order by legion craftsmen. Excellent for smashing doors or heads."
 	icon_state = "legionaxe"
 	icon_prefix = "legionaxe"
-	force = 30
+	force = 25
 	throwforce = 15
 	wound_bonus = 10
 	bare_wound_bonus = 10
@@ -51,7 +51,7 @@
 /obj/item/twohanded/legionaxe/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/butchering, 100, 80, 0 , hitsound) //axes are not known for being precision butchering tools
-	AddComponent(/datum/component/two_handed, force_unwielded=30, force_wielded=60, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=25, force_wielded=50, icon_wielded="[icon_prefix]2")
 
 /obj/item/twohanded/legionaxe/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] axes [user.p_them()]self from head to toe! It looks like [user.p_theyre()] trying to commit suicide!</span>")
@@ -272,7 +272,7 @@
 	update_icon()
 
 
-// Lance		Keywords: LEGION, Damage 25/40, Reach
+// Lance		Keywords: LEGION, Damage 15/30, Reach
 /obj/item/twohanded/spear/lance
 	name = "legion lance"
 	desc = "A long spear made in the Legions war foundries. Useful for fighting tribals and hunting when ammunition is scarce."
@@ -281,7 +281,7 @@
 
 /obj/item/twohanded/spear/lance/ComponentInitialize()
 	. = ..()
-	AddComponent(/datum/component/two_handed, force_unwielded=25, force_wielded=40, icon_wielded="[icon_prefix]2")
+	AddComponent(/datum/component/two_handed, force_unwielded=15, force_wielded=30, icon_wielded="[icon_prefix]2")
 
 
 // Scrap spear		Keywords: Damage 17/28, Reach, Throw bonus

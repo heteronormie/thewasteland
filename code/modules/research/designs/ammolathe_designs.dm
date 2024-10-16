@@ -213,7 +213,7 @@
 	category = list("initial", "Basic Magazines")
 
 /datum/design/ammolathe/greasegunmag
-	name = "empty grease submachine gun magazine (.45)"
+	name = "empty grease submachine gun magazine (9mm)"
 	id = "greasegunmag"
 	materials = list(/datum/material/iron = 4000)
 	build_path = /obj/item/ammo_box/magazine/greasegun/empty
@@ -389,6 +389,13 @@
 	id = "tube4570"
 	materials = list(/datum/material/iron = 6000)
 	build_path = /obj/item/ammo_box/tube/c4570/empty
+	category = list("initial", "Intermediate Magazines")
+	
+/datum/design/ammolathe/speedloader45
+	name = "empty speed loader (.45 ACP)"
+	id = "speedloader45"
+	materials = list(/datum/material/iron = 4000)
+	build_path = /obj/item/ammo_box/c45rev/empty
 	category = list("initial", "Intermediate Magazines")
 
 /datum/design/ammolathe/speedloader45lc

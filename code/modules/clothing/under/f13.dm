@@ -648,6 +648,8 @@
 	item_state = "raiderrags"
 	item_color = "raiderrags"
 
+// Khan Uniforms Below
+
 /obj/item/clothing/under/f13/khan
 	name = "great khan uniform"
 	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants."
@@ -657,9 +659,11 @@
 	item_state = "khan_uniform"
 	item_color = "khan_uniform"
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 10, "fire" = 10, "acid" = 40)
+	body_parts_covered = GROIN|LEGS
+	fitted = NO_FEMALE_UNIFORM
 	var/uniformtoggled = FALSE
 
-/obj/item/clothing/under/f13/khan/shorts
+/obj/item/clothing/under/f13/khan/shorts //Skirt aswell, if you alt click on it, turns into khan skirt.
 	name = "great khan jorts"
 	desc = "Clothing marking the wearer as one of the the Great Khans. Most common are denim pants, but jorts is a acceptable alternative."
 	icon = 'icons/fallout/clothing/khans.dmi'
@@ -828,8 +832,8 @@
 /obj/item/clothing/under/f13/exile/enclave
 	name = "disheveled peacekeeper uniform"
 	desc = "Khaki standard issue uniform over a black turtleneck. This one seems to be damaged."
-	icon_state = "enclave_uniformexile"
-	item_state = "enclave_uniformexile"
+	icon_state = "enclave_exile"
+	item_state = "enclave_exile"
 
 //stuff ported from WW2
 /obj/item/clothing/under/f13/ncr_formal_uniform
@@ -1694,6 +1698,19 @@
 	icon_state = "masonduds"
 	item_state = "masonduds"
 
+/obj/item/clothing/under/f13/schlimmsuit
+	name = "foreign gentleman's attire"
+	desc = "A red paisley vest and silk cravat paired with beige slacks. These clothes are strangely antiquated for their time place."
+	icon_state = "schlimmsuit"
+	item_state = "schlimmsuit"
+
+/obj/item/clothing/under/f13/ahp_uniform
+	name = "highway patrol uniform"
+	desc = "An old tan police uniform with tight-fitting breeches and a gold badge with the logo of the 'Arizona State Troopers'."
+	icon_state = "ahp_uniform"
+	item_state = "ahp_uniform"
+	item_color = "ahp_uniform"
+
 //Super Mutants
 
 /obj/item/clothing/under/f13/mutieshorts
@@ -1730,7 +1747,7 @@
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 30, "fire" = 20, "acid" = 50)
 
 /obj/item/clothing/under/f13/densuit
-	name = "the den outfit"
+	name = "mafioso outfit"
 	desc = "A dark grey, and finely pressed suit, complete with kneepads and a suspiciously golden silk shirt, only the best."
 	icon_state = "den_suit"
 	item_state = "den_suit"
@@ -1853,8 +1870,24 @@
 
 /// Item Update
 
-/obj/item/clothing/under/f13/Drill_sarge
-	name = "NCO officer uniform"
+/obj/item/clothing/under/f13/drill_sarge
+	name = "drill sergeant uniform"
 	desc = "Best god dam uniform you have ever seen! so god dam good, uncle sam would cry."
 	icon_state = "Drill_sarge"
 	item_state = "Drill_sarge"
+
+/obj/item/clothing/under/f13/tracksuit
+	name = "black tracksuit"
+	desc = "Funny little tracksuit for a funny little man."
+	icon_state = "tracksuit"
+	item_state = "tracksuit"
+
+/// Custom items
+
+/obj/item/clothing/under/f13/blackdress/maus
+	name = "gothic lolita officer dress"
+	desc = "An eccentric dress that resembles a historic officer uniform."
+	icon_state = "mausgothlolidress"
+	item_state = "mausgothlolidress"
+	fitted = FEMALE_UNIFORM_TOP
+	can_adjust = FALSE

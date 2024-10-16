@@ -38,7 +38,7 @@
 /mob/living/simple_animal/hostile/raider/Aggro()
 	..()
 	summon_backup(15)
-	say("HURRY, HURRY, HURRY!!!")
+	say(pick("HURRY, HURRY, HURRY!!", "Back off!!" , "Keep moving!!", "Times up, asshole!!", "Call a doctor, we got a bleeder!!", "Just stand still and die!!" ))
 
 // THIEF RAIDER - nabs stuff and runs
 /mob/living/simple_animal/hostile/raider/thief
@@ -90,8 +90,8 @@
 	name = "Legendary Raider"
 	desc = "Another murderer churned out by the wastes - this one seems a bit faster than the average..."
 	color = "#FFFF00"
-	maxHealth = 450
-	health = 450
+	maxHealth = 400
+	health = 400
 	speed = 1.2
 	obj_damage = 300
 	aggro_vision_range = 15
@@ -102,11 +102,11 @@
 	name = "Legendary Raider"
 	desc = "Another murderer churned out by the wastes, wielding a decent pistol and looking very strong"
 	color = "#FFFF00"
-	maxHealth = 600
-	health = 600
+	maxHealth = 450
+	health = 450
 	retreat_distance = 1
 	minimum_distance = 2
-	projectiletype = /obj/item/projectile/bullet/m44
+	projectiletype = /obj/item/projectile/bullet/m44/simple
 	projectilesound = 'sound/f13weapons/44mag.ogg'
 	extra_projectiles = 1
 	aggro_vision_range = 15
@@ -158,7 +158,7 @@
 	melee_damage_upper = 20
 	maxHealth = 200
 	health = 200
-	projectiletype = /obj/item/projectile/bullet/a556/match
+	projectiletype = /obj/item/projectile/bullet/c45/op
 	projectilesound = 'sound/f13weapons/magnum_fire.ogg'
 	casingtype = /obj/item/ammo_casing/a556
 	loot = list(/obj/item/gun/ballistic/revolver/thatgun, /obj/item/clothing/suit/armor/f13/combatrusted, /obj/item/clothing/head/helmet/f13/raidercombathelmet)

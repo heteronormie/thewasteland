@@ -404,6 +404,7 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/lasgun/hitscan)
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	fire_delay = 1
+	slowdown = 0.2
 	scope_state = "AEP7_scope"
 	scope_x_offset = 12
 	scope_y_offset = 20
@@ -526,6 +527,7 @@
 	can_charge = FALSE
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol/alien)
 	cell_type = /obj/item/stock_parts/cell/ammo/alien //unchargeable, but removable
+	trigger_guard = TRIGGER_GUARD_ALLOW_ALL // Aliens couldn't shoot this gun until now. Lmao whoops!
 
 
 //Gamma gun
@@ -541,6 +543,20 @@
 	cell_type = /obj/item/stock_parts/cell/ammo/mfc
 	ammo_x_offset = 3
 
+/obj/item/gun/energy/gammagun/cyborg
+	name = "integrated gamma gun"
+	desc = "An advanced radiation weapon commonly utilized by robots who have passionate hatred for their fellow man. Fires slow velocity, low damage radiation beams."
+	icon_state = "ultra_pistol"
+	item_state = "laser-pistol"
+	ammo_type = list(/obj/item/ammo_casing/energy/gammagun)
+	cell_type = /obj/item/stock_parts/cell/ammo/mfc
+	ammo_x_offset = 3
+	selfcharge = EGUN_SELFCHARGE_BORG
+	cell_type = /obj/item/stock_parts/cell/secborg
+	charge_delay = 3
+
+/obj/item/gun/energy/gammagun/cyborg/emp_act()
+	return
 
 //Gatling Laser
 
@@ -558,6 +574,9 @@
 	w_class = WEIGHT_CLASS_HUGE
 	var/obj/item/gun/energy/minigun/gun
 	var/armed = 0 //whether the gun is attached, 0 is attached, 1 is the gun is wielded.
+	var/overheat = 0
+	var/overheat_max = 90
+	var/heat_diffusion = 2 //How much heat is lost per tick
 
 /obj/item/minigunpack/Initialize()
 	. = ..()
@@ -567,6 +586,9 @@
 /obj/item/minigunpack/Destroy()
 	STOP_PROCESSING(SSobj, src)
 	return ..()
+
+/obj/item/minigunpack/process()
+	overheat = max(0, overheat - heat_diffusion)
 
 /obj/item/minigunpack/on_attack_hand(mob/living/carbon/user)
 	if(src.loc == user)
@@ -671,6 +693,14 @@
 		ammo_pack.attach_gun(user)
 	else
 		qdel(src)
+
+/obj/item/gun/energy/minigun/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0, stam_cost = 0)
+	if(ammo_pack)
+		if(ammo_pack.overheat < ammo_pack.overheat_max)
+			ammo_pack.overheat += burst_size
+			..()
+		else
+			to_chat(user, "The gun's heat sensor locked the trigger to prevent lens damage.")
 
 /obj/item/gun/energy/minigun/afterattack(atom/target, mob/living/user, flag, params)
 	if(!ammo_pack || ammo_pack.loc != user)

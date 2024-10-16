@@ -246,6 +246,7 @@
 	var/heal_factor = -3 //Subtractive multiplier if you do not have the perk.
 	var/heal_factor_perk = -5.2 //Multiplier if you have the right perk.
 	ghoulfriendly = TRUE
+	thirst_factor = THIRST_FACTOR * 8 // It's a drink, after all
 
 /datum/reagent/medicine/bitter_drink/on_mob_life(mob/living/carbon/M)
 	var/is_tribal = FALSE
@@ -378,14 +379,14 @@
 	..()
 	if(isliving(M))
 		to_chat(M, "<span class='notice'>You feel tougher, able to shrug off pain more easily.</span>")
-		M.maxHealth += 70
-		M.health += 70
+		M.maxHealth += 40
+		M.health += 40
 
 /datum/reagent/medicine/medx/on_mob_delete(mob/living/carbon/human/M)
 	if(isliving(M))
 		to_chat(M, "<span class='notice'>You feel as vulnerable to pain as a normal person.</span>")
-		M.maxHealth -= 70
-		M.health -= 70
+		M.maxHealth -= 40
+		M.health -= 40
 	switch(current_cycle)
 		if(1 to 40)
 			M.confused += 10
@@ -668,6 +669,7 @@
 	overdose_threshold = 30
 	color = "##DBCE18"
 	ghoulfriendly = TRUE
+	thirst_factor = THIRST_FACTOR * 6 // Tasty
 
 /datum/reagent/medicine/gaia/on_mob_life(mob/living/carbon/M)
 	M.adjustToxLoss(-0.75*REAGENTS_EFFECT_MULTIPLIER, 0)

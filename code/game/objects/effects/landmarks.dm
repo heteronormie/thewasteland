@@ -585,11 +585,7 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "NCR Ranger"
 	icon_state = "NCR Patrol Ranger"
 
-/obj/effect/landmark/start/f13/ncrrearechelon
-	name = "NCR Rear Echelon"
-	icon_state = "NCR Trooper"
-
-/obj/effect/landmark/start/f13/ncroffduty
+/obj/effect/landmark/start/f13/offdutyncr
 	name = "NCR Off-Duty"
 	icon_state = "NCR Trooper"
 
@@ -771,8 +767,9 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Citizen"
 	icon_state = "Settler"
 
-/obj/effect/landmark/start/f13/dendoc
-	name = "Doctor"
+/obj/effect/landmark/start/f13/towndoctor
+	name = "Town Doctor"
+	icon_state = "Medical Doctor"
 
 /obj/effect/landmark/start/f13/shopkeeper
 	name = "Shopkeeper"
@@ -807,17 +804,6 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 	name = "Great Khan"
 	icon_state = "Pusher"
 
-/obj/effect/landmark/start/f13/enforcer
-	name = "Den Mob Enforcer"
-	icon_state = "Enforcer"
-
-/obj/effect/landmark/start/f13/dendoctor
-	name = "Den Doctor"
-
-/obj/effect/landmark/start/f13/mobboss
-	name = "Den Mob Boss"
-	icon_state = "Boss"
-
 /obj/effect/landmark/start/f13/preacher
 	name = "Preacher"
 	icon_state = "Preacher"
@@ -846,6 +832,10 @@ obj/effect/landmark/start/f13/ncrlogisticsofficer
 
 /obj/effect/landmark/start/f13/ussgt
 	name = "Enclave Sergeant"
+	icon_state = "ussgt"
+
+/obj/effect/landmark/start/f13/usai
+	name = "Enclave Armored Infantry"
 	icon_state = "ussgt"
 
 /obj/effect/landmark/start/f13/usspecialist

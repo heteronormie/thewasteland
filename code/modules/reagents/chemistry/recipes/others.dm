@@ -17,6 +17,12 @@
 	required_reagents = list(/datum/reagent/water/hollowwater = 1)
 	required_catalysts = list(/datum/reagent/water/holywater = 1)
 
+/datum/chemical_reaction/purewater
+	name = "Purified Water"
+	id = /datum/reagent/water/purified
+	results = list(/datum/reagent/water/purified = 1)
+	required_reagents = list(/datum/reagent/water = 1, /datum/reagent/water_purifier = 1)
+
 /datum/chemical_reaction/metalgen_imprint/on_reaction(datum/reagents/holder, created_volume)
 	var/datum/reagent/metalgen/MM = holder.get_reagent(/datum/reagent/metalgen)
 	for(var/datum/reagent/R in holder.reagent_list)
@@ -474,7 +480,7 @@
 	var/turf/location = get_turf(holder.my_atom)
 	location.visible_message("<span class='danger'>The solution spews out foam!</span>")
 	var/datum/effect_system/foam_spread/s = new()
-	s.set_up(multiplier*0.2, location, holder)
+	s.set_up(multiplier*0.8, location, holder)
 	s.start()
 	holder.clear_reagents()
 	return
@@ -490,7 +496,7 @@
 	var/turf/location = get_turf(holder.my_atom)
 	location.visible_message("<span class='danger'>The solution spews out a metallic foam!</span>")
 	var/datum/effect_system/foam_spread/metal/s = new()
-	s.set_up(multiplier*2, location, holder, 1)
+	s.set_up(multiplier*3.5, location, holder, 1)
 	s.start()
 	holder.clear_reagents()
 
@@ -708,12 +714,6 @@
 	var/location = get_turf(holder.my_atom)
 	for(var/i in 1 to multiplier)
 		new /obj/item/stack/sheet/plastic(location)
-
-/datum/chemical_reaction/pax
-	name = "pax"
-	id = /datum/reagent/pax
-	results = list(/datum/reagent/pax = 3)
-	required_reagents  = list(/datum/reagent/toxin/mindbreaker = 1, /datum/reagent/medicine/synaptizine = 1, /datum/reagent/water = 1)
 
 // TODO: Add some kind of ghoulification mutation toxin? Iunno.
 

@@ -17,7 +17,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	RADIO_CHANNEL_BOS = RADIO_TOKEN_BOS,
 	RADIO_CHANNEL_ENCLAVE = RADIO_TOKEN_ENCLAVE,
 	RADIO_CHANNEL_TOWN = RADIO_TOKEN_TOWN,
-	RADIO_CHANNEL_DEN = RADIO_TOKEN_DEN,
 	RADIO_CHANNEL_LEGION = RADIO_TOKEN_LEGION,
 	RADIO_CHANNEL_RANGER = RADIO_TOKEN_RANGER,
 	RADIO_CHANNEL_KHANS = RADIO_TOKEN_KHANS
@@ -381,7 +380,7 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 /obj/item/radio/headset/headset_khans
 	name = "khan radio headset"
 	desc = "This is used by the Khans.\nTo access the Khan channel, use :h."
-	icon_state = "syndie_headset" 
+	icon_state = "syndie_headset"
 	item_state = "headset_alt"
 	keyslot = new /obj/item/encryptionkey/headset_khans
 
@@ -396,13 +395,6 @@ GLOBAL_LIST_INIT(channel_tokens, list(
 	desc = "This is used by the followers.\nTo access the town channel, use :f. \nTo access the medical channel, use :m"
 	icon_state = "med_headset"
 	keyslot = new /obj/item/encryptionkey/headset_med
-	keyslot2 = new /obj/item/encryptionkey/headset_town
-
-/obj/item/radio/headset/headset_den
-	name = "den radio headset"
-	desc = "This is used by the den. \nTo access the den channel, use :j."
-	icon_state = "mine_headset"
-	keyslot = new /obj/item/encryptionkey/headset_den
 
 /obj/item/radio/headset/headset_cent
 	name = "\improper Vault-Tec headset"

@@ -565,7 +565,10 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Great Khan Jorts",				/obj/item/clothing/under/f13/khan/shorts,							10),
 		new /datum/data/wasteland_equipment("Great Khan Booty Shorts",		/obj/item/clothing/under/f13/khan/booty,							10),
 		new /datum/data/wasteland_equipment("Great Khan boots",				/obj/item/clothing/shoes/f13/military/khan,							15),
-		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15)
+		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15),
+		new /datum/data/wasteland_equipment("Stinger Grenade",				/obj/item/grenade/f13/stinger,										200),
+		new /datum/data/wasteland_equipment("HE Grenade",					/obj/item/grenade/syndieminibomb/concussion, 						200),
+		new /datum/data/wasteland_equipment("C4",							/obj/item/grenade/plastic/c4, 										250)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Jet",							/obj/item/reagent_containers/pill/patch/jet,						30),
@@ -573,7 +576,7 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Turbo",						/obj/item/reagent_containers/pill/patch/turbo,						30),
 		new /datum/data/wasteland_equipment("Mentats",						/obj/item/storage/pill_bottle/chem_tin/mentats,						30),
 		new /datum/data/wasteland_equipment("Buffout",						/obj/item/storage/pill_bottle/chem_tin/buffout,						30),
-		new /datum/data/wasteland_equipment("Med-X",						/obj/item/reagent_containers/hypospray/medipen/medx,				30),
+		new /datum/data/wasteland_equipment("Med-X",						/obj/item/reagent_containers/hypospray/medipen/medx,				80),
 		new /datum/data/wasteland_equipment("Fixer",						/obj/item/storage/pill_bottle/chem_tin/fixer,						90),
 		new /datum/data/wasteland_equipment("Great Khan helmet",			/obj/item/clothing/head/helmet/f13/khan,							20),
 		new /datum/data/wasteland_equipment("Great Khan bandana",			/obj/item/clothing/head/helmet/f13/khan/bandana,					20),
@@ -586,9 +589,45 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Great Khan Jorts",				/obj/item/clothing/under/f13/khan/shorts,							10),
 		new /datum/data/wasteland_equipment("Great Khan Booty Shorts",		/obj/item/clothing/under/f13/khan/booty,							10),
 		new /datum/data/wasteland_equipment("Great Khan boots",				/obj/item/clothing/shoes/f13/military/khan,							15),
-		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15)
+		new /datum/data/wasteland_equipment("Great Khan pelt boots",		/obj/item/clothing/shoes/f13/military/khan_pelt,					15),
+		new /datum/data/wasteland_equipment("Stinger Grenade",				/obj/item/grenade/f13/stinger,										200),
+		new /datum/data/wasteland_equipment("HE Grenade",					/obj/item/grenade/syndieminibomb/concussion, 						200),
+		new /datum/data/wasteland_equipment("C4",							/obj/item/grenade/plastic/c4, 										250),
 		)
 
+/obj/machinery/mineral/wasteland_vendor/denvendor
+	name = "Den Illegal Supply"
+	icon_state = "generic_idle"
+	prize_list = list(
+		new /datum/data/wasteland_equipment("Type93 Assault Rifle",			/obj/item/gun/ballistic/automatic/type93,							700),
+		new /datum/data/wasteland_equipment("Pulse Grenade",				/obj/item/grenade/empgrenade,										200),
+		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/throwing_star,											115),
+		new /datum/data/wasteland_equipment("Throwing Knife",				/obj/item/melee/onehanded/knife/throwing, 							100),
+		new /datum/data/wasteland_equipment("Flashbang",					/obj/item/grenade/flashbang, 										200),
+		new /datum/data/wasteland_equipment("Smoke Grenade",				/obj/item/grenade/smokebomb, 										200),
+		new /datum/data/wasteland_equipment("Tear Gas Grenade",				/obj/item/grenade/chem_grenade/teargas,								700),
+		new /datum/data/wasteland_equipment("Stinger Grenade",				/obj/item/grenade/f13/stinger,										200),
+		new /datum/data/wasteland_equipment("HE Grenade",					/obj/item/grenade/syndieminibomb/concussion, 						200),
+		new /datum/data/wasteland_equipment("Frag Grenade",					/obj/item/grenade/syndieminibomb/concussion/frag, 					200),
+		new /datum/data/wasteland_equipment("C4",							/obj/item/grenade/plastic/c4, 										250),
+
+		)
+	highpop_list = list(
+		new /datum/data/wasteland_equipment("Type93 Assault Rifle",			/obj/item/gun/ballistic/automatic/type93,							700),
+		new /datum/data/wasteland_equipment("Pulse Grenade",				/obj/item/grenade/empgrenade,										200),
+		new /datum/data/wasteland_equipment("Throwing Star",				/obj/item/throwing_star,											115),
+		new /datum/data/wasteland_equipment("Throwing Knife",				/obj/item/melee/onehanded/knife/throwing, 							100),
+		new /datum/data/wasteland_equipment("Flashbang",					/obj/item/grenade/flashbang, 										200),
+		new /datum/data/wasteland_equipment("Smoke Grenade",				/obj/item/grenade/smokebomb, 										200),
+		new /datum/data/wasteland_equipment("Tear Gas Grenade",				/obj/item/grenade/chem_grenade/teargas,								700),
+		new /datum/data/wasteland_equipment("Stinger Grenade",				/obj/item/grenade/f13/stinger,										200),
+		new /datum/data/wasteland_equipment("HE Grenade",					/obj/item/grenade/syndieminibomb/concussion, 						200),
+		new /datum/data/wasteland_equipment("Frag Grenade",					/obj/item/grenade/syndieminibomb/concussion/frag, 					200),
+		new /datum/data/wasteland_equipment("C4",							/obj/item/grenade/plastic/c4, 										250),
+
+		)
+
+//The DEN should not offer chems!!! they deal in goods like above!!! Use accordingly
 /obj/machinery/mineral/wasteland_vendor/denchem
 	name = "Chem Dispenser"
 	icon_state = "med_idle"
@@ -658,21 +697,32 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 	icon_state = "weapon_idle"
 	prize_list = list(
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							70),
+		new /datum/data/wasteland_equipment(".22 Pistol",					/obj/item/gun/ballistic/automatic/pistol/pistol22,					110),
 		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/ninemil,					150),
 		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						170),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmith_one, 				100),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				200),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				300),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				400),
+		new /datum/data/wasteland_equipment("10mm pistol",					/obj/item/gun/ballistic/automatic/pistol/n99,						150),
+		new /datum/data/wasteland_equipment("Colt Revolver",				/obj/item/gun/ballistic/revolver/colt357,							160),
+		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						160),
+		new /datum/data/wasteland_equipment("M1 Carbine",					/obj/item/gun/ballistic/automatic/m1carbine,						160),
+		new /datum/data/wasteland_equipment("Cowboy Repeater",				/obj/item/gun/ballistic/rifle/repeater/cowboy,						170),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_one, 				100),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_two,				200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_three, 				300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_four, 				400),
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("survival knife",				/obj/item/melee/onehanded/knife/survival, 							40),
+		new /datum/data/wasteland_equipment(".22 Pistol",					/obj/item/gun/ballistic/automatic/pistol/pistol22,					50),
 		new /datum/data/wasteland_equipment("9mm pistol",					/obj/item/gun/ballistic/automatic/pistol/beretta,					60),
+		new /datum/data/wasteland_equipment("10mm pistol",					/obj/item/gun/ballistic/automatic/pistol/n99,						60),
+		new /datum/data/wasteland_equipment("Colt Revolver",				/obj/item/gun/ballistic/revolver/colt357,							70),
 		new /datum/data/wasteland_equipment("M1911",						/obj/item/gun/ballistic/automatic/pistol/m1911,						70),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmith_one, 				100),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmith_two,				200),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmith_three, 				300),
-		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmith_four, 				400),
+		new /datum/data/wasteland_equipment("M1 Carbine",					/obj/item/gun/ballistic/automatic/m1carbine,						80),
+		new /datum/data/wasteland_equipment("Cowboy Repeater",				/obj/item/gun/ballistic/rifle/repeater/cowboy,						90),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 1",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_one, 				100),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 2",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_two,				200),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 3",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_three, 				300),
+		new /datum/data/wasteland_equipment("Guns and Bullets, Part 4",		/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_four, 				400),
 		)
 
 /obj/machinery/mineral/wasteland_vendor/ammo
@@ -728,7 +778,8 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Explorer satchel",				/obj/item/storage/backpack/satchel/explorer,						25),
 		new /datum/data/wasteland_equipment("Spray bottle",					/obj/item/reagent_containers/spray,									35),
 		new /datum/data/wasteland_equipment("Bottle of E-Z-Nutrient",		/obj/item/reagent_containers/glass/bottle/nutrient/ez,				40),
-		new /datum/data/wasteland_equipment("Craftsmanship Monthly",		/obj/item/book/granter/trait/techno,								600)
+		new /datum/data/wasteland_equipment("Craftsmanship Monthly",		/obj/item/book/granter/trait/techno,								600),
+		new /datum/data/wasteland_equipment("Grognak the Barbarian",		/obj/item/book/granter/trait/bigleagues,							1400)
 		)
 	highpop_list = list(
 		new /datum/data/wasteland_equipment("Drinking glass",				/obj/item/reagent_containers/food/drinks/drinkingglass,				5),
@@ -739,40 +790,36 @@ GLOBAL_VAR_INIT(vendor_cash, 0)
 		new /datum/data/wasteland_equipment("Craftsmanship Monthly",		/obj/item/book/granter/trait/techno,								600)
 		)
 
-/* These are shit, don't add them.
+/// Removed the big camp vendor that is to big.
 
 /obj/machinery/mineral/wasteland_vendor/camp
 	name = "Wasteland Camp-O-Vend"
 	icon_state = "generic_idle"
 	prize_list = list(
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Basic Edition",			/obj/item/survivalcapsule,								50),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Premium Edition",		/obj/item/survivalcapsule/premium,						100),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Expanded Edition",		/obj/item/survivalcapsule/quad,							150),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Merchant Edition",		/obj/item/survivalcapsule/merchant,						300),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Party-Tent Edition",	/obj/item/survivalcapsule/party,						150),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Basic Edition",			/obj/item/survivalcapsule,								150),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Premium Edition",		/obj/item/survivalcapsule/premium,						200),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Expanded Edition",		/obj/item/survivalcapsule/quad,							250),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Merchant Edition",		/obj/item/survivalcapsule/merchant,						400),
 		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Mess-Hall Edition",		/obj/item/survivalcapsule/kitchen,						250),
 		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Farm-N-Go Edition",		/obj/item/survivalcapsule/farm,							200),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Occult Edition",		/obj/item/survivalcapsule/fortuneteller,				125),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Occult Edition",		/obj/item/survivalcapsule/fortuneteller,				175),
 		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Smithery Edition",		/obj/item/survivalcapsule/blacksmith,					400),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Ultra-Deluxe Edition",	/obj/item/survivalcapsule/super_deluxe,					600),
 		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Trashbag",		/obj/item/storage/bag/trash,							30),
 		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Soap",			/obj/item/soap/homemade,								25)
 		)
 	highpop_list = list(
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Basic Edition",			/obj/item/survivalcapsule,								50),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Premium Edition",		/obj/item/survivalcapsule/premium,						100),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Expanded Edition",		/obj/item/survivalcapsule/quad,							150),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Merchant Edition",		/obj/item/survivalcapsule/merchant,						300),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Party-Tent Edition",	/obj/item/survivalcapsule/party,						150),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Basic Edition",			/obj/item/survivalcapsule,								150),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Premium Edition",		/obj/item/survivalcapsule/premium,						200),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Expanded Edition",		/obj/item/survivalcapsule/quad,							250),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Merchant Edition",		/obj/item/survivalcapsule/merchant,						400),
 		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Mess-Hall Edition",		/obj/item/survivalcapsule/kitchen,						250),
 		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Farm-N-Go Edition",		/obj/item/survivalcapsule/farm,							200),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Occult Edition",		/obj/item/survivalcapsule/fortuneteller,				125),
+		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Occult Edition",		/obj/item/survivalcapsule/fortuneteller,				175),
 		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Smithery Edition",		/obj/item/survivalcapsule/blacksmith,					400),
-		new /datum/data/wasteland_equipment("Vault-Tec C.A.M.P. Ultra-Deluxe Edition",	/obj/item/survivalcapsule/super_deluxe,					600),
 		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Trashbag",		/obj/item/storage/bag/trash,							30),
 		new /datum/data/wasteland_equipment("Keep your C.A.M.P. Clean: Soap",			/obj/item/soap/homemade,								25)
 		)
-*/
+
 
 /obj/machinery/mineral/wasteland_vendor/pipboy
 	name = "Wasteland Pip-N-Walk"

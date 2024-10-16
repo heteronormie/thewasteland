@@ -1,3 +1,4 @@
+/* The Wasteland edit
 /obj/item/integrated_circuit/weaponized
 	category_text = "Weaponized"
 
@@ -139,6 +140,7 @@
 	A.fire()
 	log_attack("[assembly] [REF(assembly)] has fired [installed_gun].")
 	return A
+ */
 
 /obj/item/integrated_circuit/weaponized/grenade
 	name = "grenade primer"

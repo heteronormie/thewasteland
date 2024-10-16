@@ -137,7 +137,7 @@
 /datum/gang_item/weapon/shuriken
 	name = "Shuriken"
 	id = "shuriken"
-	cost = 30
+	cost = 100
 	item_path = /obj/item/throwing_star
 
 /datum/gang_item/weapon/switchblade
@@ -246,7 +246,7 @@
 /datum/gang_item/equipment/he
 	name = "High Explosive Grenade"
 	cost = 100
-	item_path = /datum/crafting_recipe/concussion
+	item_path = /obj/item/grenade/syndieminibomb/concussion
 
 
 ///////////////////

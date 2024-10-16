@@ -1,6 +1,6 @@
 /obj/item/projectile/bullet/shotgun_slug
 	name = "12g shotgun slug"
-	damage = 50
+	damage = 35
 	stamina = 10 //all shotguns deal a very slight amount of stamina damage from the impact
 	sharpness = SHARP_POINTY
 	wound_bonus = 26
@@ -19,8 +19,8 @@
 
 /obj/item/projectile/bullet/shotgun_beanbag
 	name = "beanbag slug"
-	damage = 10
-	stamina = 60
+	damage = 5
+	stamina = 50
 	wound_bonus = 20
 	sharpness = SHARP_NONE
 	embedding = null
@@ -111,7 +111,7 @@
 
 /obj/item/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-	damage = 11
+	damage = 9
 	wound_bonus = 5
 	bare_wound_bonus = 5
 	wound_falloff_tile = -2.5 // low damage + additional dropoff will already curb wounding potential anything past point blank
@@ -147,19 +147,14 @@
 	..()
 
 /obj/item/projectile/bullet/pellet/trainshot
-	damage = 15
-	stamina = 10
-	armour_penetration = 0.45
-	wound_bonus = 15
-	bare_wound_bonus = 15
-	sharpness = SHARP_NONE //crunch
-	tile_dropoff = 0
-	tile_dropoff_s = 0
+	damage = 11 // less pellets, more dam + tiny bit of pen
+	armour_penetration = 0.4
+	sharpness = SHARP_NONE
 
 /obj/item/projectile/bullet/pellet/trainshot/on_hit(atom/target)
 	. = ..()
-	if(ismovable(target) && prob(8))
-		var/atom/movable/M = target
+	if(iscarbon(target) && prob(8))
+		var/mob/living/carbon/M = target
 		var/atom/throw_target = get_edge_target_turf(M, get_dir(src, get_step_away(M, src)))
 		M.safe_throw_at(throw_target, 2, 3)
 

@@ -73,7 +73,6 @@ GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
 //NCR Assistant and Legion Camp Follower re-added to whitelisting.  BoS Initiate removed from whitelist.
 
 GLOBAL_LIST_INIT(faction_whitelist_positions, list(
-"Head Scribe",
 "Elder",
 "Head Paladin",
 "Head Knight",
@@ -111,6 +110,7 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Enclave Lieutenant",
 "Enclave Gunnery Sergeant",
 "Enclave Sergeant",
+"Enclave Armored Infantry",
 "Enclave Specialist",
 "Enclave Scientist",
 "Enclave Private",
@@ -162,6 +162,8 @@ GLOBAL_LIST_INIT(oasis_positions, list(
 	"Prospector",
 	"Detective",
 	"Barkeep",
+	"Town Doctor",
+	"Preacher"
 ))
 
 GLOBAL_LIST_INIT(legion_command_positions, list(
@@ -212,7 +214,7 @@ GLOBAL_LIST_INIT(ncr_positions, list(
 	"NCR Conscript",
 	"NCR Medical Officer",
 	"NCR Logistics Officer",
-	"NCR Rear Echelon",
+	"NCR Off-Duty",
 ))
 
 GLOBAL_LIST_INIT(vault_positions, list(
@@ -227,14 +229,10 @@ GLOBAL_LIST_INIT(vault_positions, list(
 ))
 
 GLOBAL_LIST_INIT(wasteland_positions, list(
-	"Den Mob Boss",
-	"Den Mob Enforcer",
-	"Den Doctor",
 	"Outlaw",
 	"Great Khan",
 	"Faithful",
 	"Vigilante",
-	"Preacher",
 	"Tribal",
 	"Wastelander",
 ))
@@ -244,6 +242,7 @@ GLOBAL_LIST_INIT(enclave_positions, list(
 	"Enclave Lieutenant",
 	"Enclave Gunnery Sergeant",
 	"Enclave Sergeant",
+	"Enclave Armored Infantry",
 	"Enclave Specialist",
 	"Enclave Scientist",
 	"Enclave Private",

@@ -411,6 +411,7 @@ GLOBAL_LIST_INIT(loot_medical_tool, list(
 GLOBAL_LIST_INIT(loot_medical_medicine, list(
 	/obj/item/reagent_containers/pill/patch/healingpowder,
 	/obj/item/storage/pill_bottle/chem_tin/radx,
+	/obj/item/reagent_containers/pill/water_purifier,
 	/obj/item/reagent_containers/blood/radaway,
 	/obj/item/reagent_containers/hypospray/medipen/stimpak,
 	/obj/item/reagent_containers/medspray/styptic,
@@ -482,13 +483,13 @@ GLOBAL_LIST_INIT(loot_t5_melee, list(
 	/obj/item/twohanded/chainsaw,
 	/obj/item/melee/transforming/energy/axe/protonaxe,
 	/obj/item/melee/powered/ripper,
-	/obj/item/melee/powerfist/f13,
+	/obj/item/melee/unarmed/powerfist,
 	/obj/item/twohanded/sledgehammer/rockethammer,
 	/obj/item/gun/ballistic/revolver/ballisticfist,
 	/obj/item/twohanded/sledgehammer/supersledge,
 	/obj/item/shishkebabpack,
 	/obj/item/melee/unarmed/deathclawgauntlet,
-	/obj/item/melee/powerfist/f13/moleminer
+	/obj/item/melee/unarmed/powerfist/moleminer
 ))
 
 GLOBAL_LIST_INIT(loot_t1_range, list(
@@ -867,10 +868,10 @@ GLOBAL_LIST_INIT(loot_skillbook, list(
 	/obj/item/book/granter/trait/chemistry,
 	/obj/item/book/granter/trait/trekking,
 	/obj/item/book/granter/trait/pa_wear,
-	/obj/item/book/granter/crafting_recipe/gunsmith_one,
-	/obj/item/book/granter/crafting_recipe/gunsmith_two,
-	/obj/item/book/granter/crafting_recipe/gunsmith_three,
-	/obj/item/book/granter/crafting_recipe/gunsmith_four
+	/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_one,
+	/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_two,
+	/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_three,
+	/obj/item/book/granter/crafting_recipe/gunsmithing/gunsmith_four
 ))
 
 GLOBAL_LIST_INIT(loot_craft_advanced, list(
